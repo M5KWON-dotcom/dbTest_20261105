@@ -5,13 +5,24 @@ import java.sql.DriverManager;
 
 public class DBConnection {
    
-   //MySQL 접속 주소
-   private static final String url = "jdbc:mysql://localhost:3306/javaboard?serverTimezone=Asia/Seoul&characterEncoding=UTF-8";
-   
-   //MySQL 계정
-   private static final String user = "root";
-   private static final String pass = "12345";
-   
+  
+	 //MySQL 접속 주소
+	 //  private static final String url = "jdbc:mysql://localhost:3306/javaboard?serverTimezone=Asia/Seoul&characterEncoding=UTF-8";
+	 
+	 //오라클 접속 주소
+	//  private static final String url = "jdbc:oracle:thin:@localhost:1521/FREEPDB1";
+	   //MySQL 계정
+	 //  private static final String user = "root";
+	 //  private static final String pass = "12345";
+	   
+	//   private static final String user = "JAVABOARD";
+	 //  private static final String pass = "12345";
+	 
+	   
+	   private static final String url = "jdbc:mariadb://localhost:3336/member";
+		
+	   private static final String user = "root";
+	   private static final String pass = "12345";
    //데이터베이스 연결 메소드
    public static Connection getConnection() {
       

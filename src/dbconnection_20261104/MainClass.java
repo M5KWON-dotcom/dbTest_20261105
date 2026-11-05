@@ -77,6 +77,11 @@ public class MainClass {
 		System.out.print("탈퇴할 아이디 입력 : ");
 		String userid = sc.nextLine();
 		
+		if(!userid.equals(loginId)) {
+			System.out.println("로그인한 유저와 탈퇴시키려는 유저가 일치하지않습니다!");
+			return;
+		}
+		
 		String sql = "DELETE FROM member WHERE userid = ?";
 		
 		try {
@@ -310,6 +315,8 @@ public class MainClass {
 		
 		System.out.print("게시글 내용 : ");
 		String content = sc.nextLine();
+		
+	//	String sql = "INSERT INTO board(bno, title, content, writer) VALUES (board_seq.nextval,?,?,?)";
 		
 		String sql = "INSERT INTO board(title, content, writer) VALUES (?,?,?)";
 		
